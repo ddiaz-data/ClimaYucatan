@@ -25,7 +25,7 @@ descargar_clima <- function(nombre_ciudad, coords) {
     lonlat = coords,            # Coordenadas
     pars = c("T2M", "PRECTOTCORR"), # Temperatura y Lluvia
     dates = c("2023-01-01", "2023-12-31"), 
-    temporal_api = "daily"      # <--- AQUÍ ESTABA EL CAMBIO (antes era temporal_average)
+    temporal_api = "daily"      # Temporalidad de los datos
   ) %>%
     mutate(ciudad = nombre_ciudad) 
 }
